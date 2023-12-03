@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var rolesRouter = require('./routes/roles');
 var studentsRouter = require('./routes/students');
+var authRouter = require("./routes/auth")
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/roles', rolesRouter);
 app.use('/students', studentsRouter);
+app.use('/auth', authRouter);
 
 
   const db = require('./models/index')

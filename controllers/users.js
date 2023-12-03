@@ -8,12 +8,14 @@ exports.usersController = {
             res.status(200)
             .send(data)
         }).catch(err=> {
-            const errorObj = {}
-            err.erros.map(error => {
-                errorObj[error.path] = error.message
-            })
+            // const errorObj = {}
+            // err.erros.map(error => {
+            //     errorObj[error.path] = error.message
+            // })
+            // res.status(400)
+            // .send(errObj)
             res.status(400)
-            .send(errObj)
+            .send(err)
         })
     },
     getAll: (req, res)=> {

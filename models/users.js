@@ -23,6 +23,10 @@ module.exports = (sequelize, dataType)=>{
                     msg: "Username must be of min 6 and max 10 chars"
                 }
             }
+        }, 
+        password: {
+            type: dataType.STRING, 
+            allowNull: false
         }
     }) 
     return User 
